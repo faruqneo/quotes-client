@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: 'https://morning-inlet-78106.herokuapp.com'
 };
