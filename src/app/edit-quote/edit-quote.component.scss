@@ -1,0 +1,22 @@
+
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    background-color: #fafafa;
+    margin-top: 12px;
+}
+
+.quote-label {
+    color: black;
+    &:hover{
+        color: #7b1fa2;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .quote-form {
+        width: 50vw;
+    }
+}
+

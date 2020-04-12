@@ -1,0 +1,22 @@
+<button mat-button color="primary" class="create-quote" [routerLink]="['/edit']">
+    <mat-icon>note_add</mat-icon>
+    Create Quotes
+</button>
+<mat-card class="quote-card" *ngFor="let item of qutoes | async">
+    <mat-card-header>
+        <div mat-card-avatar class="avatar" [ngStyle]="getRamdomColor()">
+            <span>{{item.author.split(" ")[0].split('')[0]+item.author.split(" ")[1].split('')[0]}}</span>
+        </div>
+        <mat-card-title class="qutoe-title">{{item.author}}</mat-card-title>
+    </mat-card-header>
+    <br />
+    <mat-card-content>
+        <p class="qutoe-body">
+            {{item.title}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions class="action">
+        <button mat-button color="primary" [routerLink]="['/edit', item._id]">Edit</button>
+        <button mat-button color="warn" (click)="onDelete(item._id)">Delete</button>
+    </mat-card-actions>
+</mat-card>

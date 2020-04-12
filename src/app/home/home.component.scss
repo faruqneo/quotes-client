@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 2rem;
+}
+
+.quote {
+    // color: #7b1fa2;
+    font-size: 2rem;
+    font-family: 'Satisfy', cursive;
+
+    &::before {
+        content: '"';
+    }
+
+    &::after {
+        content: '"';
+    }
+}
+
+// @media screen and (min-width: 768px) {
+//     .home-container {
+//         width: 60vh;
+//     }
+// }

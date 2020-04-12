@@ -1,0 +1,16 @@
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.active {
+    background-color: #ffffff;
+    color:#7b1fa2;
+}

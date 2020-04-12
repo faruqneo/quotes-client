@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Lobster&display=swap');
+
+.quote-card {
+    background-color: #ffffff;
+    color: #000000;
+    margin: 2rem;
+    box-shadow: 0px 2px 1px -1px rgba(221, 14, 224, 0.98), 
+                0px 1px 1px 0px rgba(196, 25, 239, 0.94), 
+                0px 1px 3px 0px rgba(192, 30, 212, 0.86);   
+}
+
+.qutoe-body {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+
+.qutoe-title {
+    color: #7b1fa2;
+    font-family: 'Lobster', cursive;
+}
+
+.action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.avatar {
+    background: #7b1fa2;
+    box-sizing: border-box;
+    padding-top: 9px;
+    padding-left: 2px;
+    font-size: 24px;
+    margin-top: -8px;
+    span {
+        color: #ffffff;
+        font-weight: bold;
+    }
+}
+
+.create-quote {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .quote-card {
+        width: 600px;
+    }
+}
