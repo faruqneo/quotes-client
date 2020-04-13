@@ -38,10 +38,10 @@ export class QuotesComponent implements OnInit {
 
   onDelete(id) {
     console.log(id);
-    this.snackBar.open('Please Contact With Admin')
-    // this.quoteService.deleteQuotes(id).subscribe(data => {
-    //   this.getData();
-    //   console.log('Quote Deleted.')
-    // })
+    // this.snackBar.open('Please Contact With Admin')
+    this.quoteService.deleteQuotes(id).subscribe(data => {
+      this.getData();
+      console.log('Quote Deleted.')
+    })
   }
 }
