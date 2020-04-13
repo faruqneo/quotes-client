@@ -15,24 +15,24 @@ export class QuotesService {
   constructor(private http: HttpClient) { }
 
   getQuotes(): Observable<Quote[]> {
-    return this.http.get<Quote[]>(`${baseUrl}/quotes`)
+    return this.http.get<Quote[]>(`${baseUrl}/quote`)
       .pipe(tap(data => console.log(data, "Quote Serivce")));
   }
 
   getQuote(id: string): Observable<Quote> {
-    return this.http.get<Quote>(`${baseUrl}/quotes/${id}`)
+    return this.http.get<Quote>(`${baseUrl}/quote/${id}`)
       .pipe(tap(data => console.log(data, "Quote Serivce")));
   }
 
   createQuotes(quote: Quote): Observable<Quote> {
-    return this.http.post<Quote>(`${baseUrl}/quotes`, quote);
+    return this.http.post<Quote>(`${baseUrl}/quote`, quote);
   }
 
   updateQuotes(quote: Quote, id: string): Observable<Quote> {
-    return this.http.put<Quote>(`${baseUrl}/quotes/${id}`, quote);
+    return this.http.put<Quote>(`${baseUrl}/quote/${id}`, quote);
   }
 
   deleteQuotes(id: string): Observable<Quote> {
-    return this.http.delete<Quote>(`${baseUrl}/quotes/${id}`);
+    return this.http.delete<Quote>(`${baseUrl}/quote/${id}`);
   }
 }
