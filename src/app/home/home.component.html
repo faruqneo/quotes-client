@@ -1,8 +1,8 @@
-
 <div class="home-container" *ngIf="quote | async as quote">
     <span class="quote">
-        {{quote.title}}
+        {{quote[quote.length - 1].title}}
     </span>
+    <p class="quote-author"> -- {{quote[quote.length - 1].author}}</p>
     <br />
     <button mat-raised-button color="primary" [routerLink]="['/quotes']">View Quotes</button>
 </div>
