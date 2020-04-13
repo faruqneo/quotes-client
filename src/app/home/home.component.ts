@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     // this.quote = this.quoteServies.getQuote('5e8f07da9029af47335bfb87');
-    this.quoteServies.getQuotes().subscribe(data => this.quote = data);
+    this.quoteServies.getQuotes().subscribe(data => this.quote = data );
   }
 
 }

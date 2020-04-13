@@ -1,4 +1,4 @@
-<div class="home-container" *ngIf="quote">
+<div class="home-container" *ngIf="quote.length; else elseBlock">
     <span class="quote">
         {{quote[quote.length - 1].title}}
     </span>
@@ -6,3 +6,12 @@
     <br />
     <button mat-raised-button color="primary" [routerLink]="['/quotes']">View Quotes</button>
 </div>
+
+<ng-template #elseBlock>
+    <div class="home-container">
+        <span class="quote">
+            Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.
+        </span>
+        <p class="quote-author"> -- Admin</p>
+    </div>
+</ng-template>
