@@ -38,7 +38,7 @@ export class QuotesComponent implements OnInit {
 
   onDelete(id) {
     console.log(id);
-    this.snackBar.open('Please connect to faruq')
+    this.snackBar.open('Please connect with Admin')
     // this.quoteService.deleteQuotes(id).subscribe(data => {
     //   this.getData();
     //   console.log('Quote Deleted.')
