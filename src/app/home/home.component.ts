@@ -10,13 +10,13 @@ import { QuotesService } from '../quotes.service';
 })
 export class HomeComponent implements OnInit {
 
-  quote: Observable<Quote[]>;
+  quote: Quote[];
 
   constructor(private quoteServies: QuotesService) { }
 
   ngOnInit(): void {
     // this.quote = this.quoteServies.getQuote('5e8f07da9029af47335bfb87');
-    this.quote = this.quoteServies.getQuotes();
+    this.quoteServies.getQuotes().subscribe(data => this.quote = data);
   }
 
 }
